@@ -1,9 +1,14 @@
 {
-  "schema": 2,
+  "schema": 1,
   "mode": "external-static-same-origin",
-  "source": "dist/.release",
   "files": {
-    "game-fc74679e3b97.wasm": {"bytes": 39514754, "contentType": "application/wasm"},
-    "game-bb2e79ae00aa.pck": {"bytes": 19033404, "contentType": "application/octet-stream"}
+    "game.wasm": {
+      "bytes": 39514754,
+      "contentType": "application/wasm"
+    },
+    "game.pck": {
+      "bytes": 30114656,
+      "contentType": "application/octet-stream"
+    }
   }
 }
