@@ -6,12 +6,14 @@
   <meta name="theme-color" content="#fce83c">
   <meta name="color-scheme" content="dark">
   <link rel="manifest" href="./site.webmanifest">
-  
-  
+  <link rel="icon" type="image/png" sizes="64x64" href="/share/favicon.png">
+  <link rel="apple-touch-icon" href="/share/favicon.png">
   <meta name="manus-game-loading-screen" content="1">
-  
-  
-
+  <title>The Bald Brawler</title>
+  <link rel="preload" href="./game-fc74679e3b97.wasm" as="fetch" type="application/wasm" crossorigin="anonymous">
+<link rel="preload" href="./game-bb2e79ae00aa.pck" as="fetch" type="application/octet-stream" crossorigin="anonymous">
+  <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
   <!-- Project-owned starting point, not the platform default. Customize the presentation below. -->
   <!-- Embedded Noto Sans SC loader subset: SIL Open Font License 1.1; license text: assets/template/fonts/NotoSansSC-OFL.txt. -->
@@ -63,29 +65,6 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
     body { padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.001ms!important; transition-duration:0.001ms!important; scroll-behavior:auto!important; } }
   </style>
-<!-- manus:game-sharing:start -->
-<title>The Bald Brawler</title>
-<link rel="icon" type="image/png" href="./share/99adfec157f54dfaeced1e6b4ec60ec8320be954fac7e782ce34ce79dee3536b.png">
-<link rel="apple-touch-icon" href="./share/99adfec157f54dfaeced1e6b4ec60ec8320be954fac7e782ce34ce79dee3536b.png">
-<meta name="description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Bald Brawler">
-<meta property="og:description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta property="og:url" content="https://baldbrawlpub-zduaykdy.manus.game/">
-<meta property="og:image" content="https://baldbrawlpub-zduaykdy.manus.game/share/94d402a9a4bc6203560054a1b84335b0112ec0364e28f1487cbd545af4d2a17f.png">
-<meta property="og:image:width" content="2560">
-<meta property="og:image:height" content="1440">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="The Bald Brawler">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Bald Brawler">
-<meta name="twitter:description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta name="twitter:image" content="https://baldbrawlpub-zduaykdy.manus.game/share/94d402a9a4bc6203560054a1b84335b0112ec0364e28f1487cbd545af4d2a17f.png">
-<meta name="twitter:image:alt" content="The Bald Brawler">
-<!-- manus:game-sharing:end -->
-<!-- Preload the immutable, content-versioned Godot binaries early. GitHub Pages cannot set custom immutable headers, so the hash in each filename provides safe cache invalidation. -->
-<link rel="preload" href="./game-fc74679e3b97.wasm" as="fetch" type="application/wasm" crossorigin="anonymous">
-<link rel="preload" href="./game-32db151952ce.pck" as="fetch" type="application/octet-stream" crossorigin="anonymous">
 </head>
 <body>
   <canvas id="canvas" tabindex="0">Your browser does not support canvas.</canvas>
@@ -101,10 +80,9 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
     <noscript>JavaScript is required to play this game.</noscript>
     </div>
   </section>
-  <script>(function(){var R={"index.wasm":"game-fc74679e3b97.wasm","index.pck":"game-32db151952ce.pck"};var f=window.fetch.bind(window);window.fetch=function(i,o){var u=typeof i==="string"?i:(i&&i.url)||"";var b=u.split("?")[0].split("/").pop();return R[b]?f(R[b],o):f(i,o)};})();</script>
-<script>
+  <script>
     (() => {
-      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":30105664,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":19033404,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
       config.ensureCrossOriginIsolationHeaders = false;
       const threads = false;
       const canvas = document.getElementById('canvas');
@@ -272,13 +250,11 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
         if (failed) return;
         try {
 	          lastProgressAt = performance.now();
-          // Let the release-generated fetch mapping provide the immutable,
-          // hash-addressed WASM/PCK assets. Do not route them through the
-          // legacy boot proxy, which can serve an older game snapshot.
-          const previewBuild = window.location.pathname.includes('/__manus__/game-preview/');
-          const publicBootAssets = previewBuild ? {} : {
+          // Load the boot binaries directly from the same static origin. The
+          // distinct names deliberately bypass legacy storage/proxy mappings.
+          const publicBootAssets = {
             'index.wasm': 'game-fc74679e3b97.wasm',
-            'index.pck': 'game-32db151952ce.pck'
+            'index.pck': 'game-bb2e79ae00aa.pck'
           };
           const generatedFetch = window.fetch.bind(window);
           window.fetch = (input, init) => {
@@ -355,11 +331,6 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
       document.head.appendChild(script);
     })();
   </script>
-<script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js", {scope: "./"}).catch(() => {}));
-      }
-    </script>
 </body>
 </html>
 
