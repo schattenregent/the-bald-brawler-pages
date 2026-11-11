@@ -2,11 +2,11 @@
   "schema": 1,
   "mode": "external-static-same-origin",
   "files": {
-    "game.wasm": {
+    "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game.pck": {
+    "game-32db151952ce.pck": {
       "bytes": 30105664,
       "contentType": "application/octet-stream"
     }
