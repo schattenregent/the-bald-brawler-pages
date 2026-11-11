@@ -352,6 +352,11 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
       document.head.appendChild(script);
     })();
   </script>
+<script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js", {scope: "./"}).catch(() => {}));
+      }
+    </script>
 </body>
 </html>
 
