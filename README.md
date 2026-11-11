@@ -42,3 +42,27 @@ Lies die Tells des Gegners, weiche im richtigen Moment aus und kontere gezielt. 
 ## Technischer Hinweis
 
 Die großen Godot-Binärdateien werden als inhaltsversionierte Dateien veröffentlicht. Dadurch können wiederkehrende Spieler unveränderte WASM-/PCK-Versionen aus dem Browsercache nutzen, während neue Releases automatisch neue URLs erhalten.
+## Screenshots
+
+### Intro
+
+![Intro von The Bald Brawler](docs/screenshots/intro.webp)
+
+### Hauptmenü
+
+![Hauptmenü von The Bald Brawler](docs/screenshots/main-menu.webp)
+
+## Kurzer Trailertext
+
+> Ein kahler Kopf. Zwei rote Fäuste. Eine letzte Chance auf den Weltmeistertitel.
+> Lies jeden Schlagansatz, weiche im richtigen Moment aus und schicke die Gegner im klassischen 8-Bit-Arcade-Stil auf die Bretter.
+
+## Lade- und Cache-Optimierung
+
+- WASM und PCK werden unter Inhalts-Hashes ausgeliefert: Änderungen erzeugen automatisch neue URLs.
+- Preload-Tags beginnen den Download der beiden großen Dateien bereits während des HTML-Ladens.
+- `sw.js` verwendet für versionierte WASM-/PCK-Dateien eine Cache-First-Strategie. Wiederkehrende Spieler laden unveränderte Releases dadurch lokal.
+- Die HTML-Datei bleibt kurzlebig revalidierbar; die versionierten Binärdateien können sicher wiederverwendet werden.
+
+GitHub Pages erlaubt keine projektspezifischen `Cache-Control: immutable`-Header. Die Kombination aus Hash-Dateinamen, Preload und Service Worker ist deshalb die sichere Optimierung innerhalb der Plattformgrenzen.
+

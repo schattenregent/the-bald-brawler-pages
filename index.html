@@ -83,6 +83,9 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
 <meta name="twitter:image" content="https://baldbrawlpub-zduaykdy.manus.game/share/94d402a9a4bc6203560054a1b84335b0112ec0364e28f1487cbd545af4d2a17f.png">
 <meta name="twitter:image:alt" content="The Bald Brawler">
 <!-- manus:game-sharing:end -->
+<!-- Preload the immutable, content-versioned Godot binaries early. GitHub Pages cannot set custom immutable headers, so the hash in each filename provides safe cache invalidation. -->
+<link rel="preload" href="./game-fc74679e3b97.wasm" as="fetch" type="application/wasm" crossorigin="anonymous">
+<link rel="preload" href="./game-32db151952ce.pck" as="fetch" type="application/octet-stream" crossorigin="anonymous">
 </head>
 <body>
   <canvas id="canvas" tabindex="0">Your browser does not support canvas.</canvas>
