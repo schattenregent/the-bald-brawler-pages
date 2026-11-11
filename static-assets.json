@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "mode": "external-static-same-origin",
+  "files": {
+    "game.wasm": {
+      "bytes": 39514754,
+      "contentType": "application/wasm"
+    },
+    "game.pck": {
+      "bytes": 30105664,
+      "contentType": "application/octet-stream"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "project": "/home/ubuntu/baldbrawlpublic",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "preset": "Web",
+  "mode": "release",
+  "index": "index.html",
+  "pck": "index.pck",
+  "wasm": "index.wasm"
+}
