@@ -5,5 +5,8 @@
   "mode": "release",
   "index": "index.html",
   "pck": "index.pck",
-  "wasm": "index.wasm"
+  "wasm": "index.wasm",
+  "publishedVersion": "fc74679e3b97-e1d882adfe7c",
+  "publishedPck": "game-e1d882adfe7c.pck",
+  "publishedWasm": "game-fc74679e3b97.wasm"
 }
