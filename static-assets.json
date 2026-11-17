@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "fc74679e3b97-fce74c53fe04",
+  "version": "fc74679e3b97-566e84974f7a",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
@@ -15,7 +15,7 @@
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-fce74c53fe04.pck": {
+    "game-566e84974f7a.pck": {
       "bytes": 39993576,
       "contentType": "application/octet-stream"
     }
