@@ -254,6 +254,9 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
           // distinct names deliberately bypass legacy storage/proxy mappings.
           const publicBootAssets = {
             'index.wasm': 'game-fc74679e3b97.wasm?v=fc74679e3b97-0d8937f18bb2',
+            'index.pck': 'game-0d8937f18bb2.pck?v=0d8937f18bb2'
+          };
+          const generatedFetch = window.fetch.bind(window);
           window.fetch = (input, init) => {
             const url = typeof input === 'string' ? input : (input && input.url) || '';
             const name = url.split('?')[0].split('/').pop();
