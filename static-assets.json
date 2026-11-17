@@ -8,7 +8,7 @@
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 39993576,
+      "bytes": 40119048,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
@@ -16,7 +16,7 @@
       "contentType": "application/wasm"
     },
     "game-566e84974f7a.pck": {
-      "bytes": 39993576,
+      "bytes": 40119048,
       "contentType": "application/octet-stream"
     }
   }
