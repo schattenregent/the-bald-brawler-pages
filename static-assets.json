@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "fc74679e3b97-9b6cd02b242e",
+  "version": "fc74679e3b97-b6214cc3f9f4",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 39738048,
+      "bytes": 39755536,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-9b6cd02b242e.pck": {
-      "bytes": 39738048,
+    "game-b6214cc3f9f4.pck": {
+      "bytes": 39755536,
       "contentType": "application/octet-stream"
     }
   }
