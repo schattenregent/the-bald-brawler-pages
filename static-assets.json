@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "original-arena-texture-bf4b29c574ce",
+  "version": "crowd-audio-f7dbaba194e2",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 54894124,
+      "bytes": 54893420,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-bf4b29c574ce.pck": {
-      "bytes": 54894124,
+    "game-f7dbaba194e2.pck": {
+      "bytes": 54893420,
       "contentType": "application/octet-stream"
     }
   }
