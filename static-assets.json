@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "crowd-audio-f7dbaba194e2",
+  "version": "crowd-volume-announcer-e8e6cc643d1a",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 54893420,
+      "bytes": 54927628,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-f7dbaba194e2.pck": {
-      "bytes": 54893420,
+    "game-e8e6cc643d1a.pck": {
+      "bytes": 54927628,
       "contentType": "application/octet-stream"
     }
   }
