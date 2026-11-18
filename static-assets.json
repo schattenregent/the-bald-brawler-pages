@@ -1,15 +1,17 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "arcade-pass-47b1d382f436",
+  "version": "punch-audio-fff454ebe0b8",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
-      "contentType": "application/wasm"
+      "contentType": "application/wasm",
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "game.pck": {
-      "bytes": 54930316,
-      "contentType": "application/octet-stream"
+      "bytes": 54931980,
+      "contentType": "application/octet-stream",
+      "sha256": "fff454ebe0b897fec02a39aff4af3343f52ca9f21bc3c7b647495c7f7a0b35b5"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
