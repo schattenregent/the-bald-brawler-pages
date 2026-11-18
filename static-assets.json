@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "crowd-volume-announcer-e8e6cc643d1a",
+  "version": "arcade-audio-8666c1e8efa8c",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 54927628,
+      "bytes": 54928060,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-e8e6cc643d1a.pck": {
-      "bytes": 54927628,
+    "game-8666c1e8efa8c.pck": {
+      "bytes": 54928060,
       "contentType": "application/octet-stream"
     }
   }
