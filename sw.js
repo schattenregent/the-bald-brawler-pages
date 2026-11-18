@@ -1,4 +1,4 @@
-const CACHE = 'bald-brawler-runtime-fc74679e3b97-45ea58e46db2';
+const CACHE = 'bald-brawler-runtime-fc74679e3b97-bfd248ebde55';
 const VERSIONED_BINARY = /^game-[a-f0-9]+\.(wasm|pck)$/;
 self.addEventListener('install', (event) => {
   event.waitUntil(self.skipWaiting());
