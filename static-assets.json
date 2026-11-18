@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "fc74679e3b97-9343bfe72c042",
+  "version": "fighter-fullset-2b288b754106",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 36255828,
+      "bytes": 48345016,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-9343bfe72c042.pck": {
-      "bytes": 36255828,
+    "game-2b288b754106.pck": {
+      "bytes": 48345016,
       "contentType": "application/octet-stream"
     }
   }
