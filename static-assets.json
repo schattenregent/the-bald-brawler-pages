@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "audio-routing-fix-48fcd1876d03",
+  "version": "audio-regression-d08d0ec0f3ac",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 54928396,
+      "bytes": 54928652,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-48fcd1876d03.pck": {
-      "bytes": 54928396,
+    "game-d08d0ec0f3ac.pck": {
+      "bytes": 54928652,
       "contentType": "application/octet-stream"
     }
   }
