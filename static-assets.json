@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "rope-fix-8bfe6106de7f",
+  "version": "original-rope-animation-4a56c8ce2eee",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
     "game.pck": {
-      "bytes": 54927452,
+      "bytes": 54928572,
       "contentType": "application/octet-stream"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm"
     },
-    "game-8bfe6106de7f.pck": {
-      "bytes": 54927452,
+    "game-4a56c8ce2eee.pck": {
+      "bytes": 54928572,
       "contentType": "application/octet-stream"
     }
   }
