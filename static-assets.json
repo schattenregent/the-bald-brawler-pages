@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "knockdown-audio-aa770149efcc",
+  "version": "tko-audio-b5f468c0ab58",
   "files": {
     "game.wasm": {
       "bytes": 39514754,
@@ -9,9 +9,9 @@
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "game.pck": {
-      "bytes": 54933692,
+      "bytes": 54900236,
       "contentType": "application/octet-stream",
-      "sha256": "aa770149efccab6834caa1f20ff0b3709d5a134e4c6837e84610ebd254a2970a"
+      "sha256": "b5f468c0ab58339d0c670c92715ffb1d177860bbfe2e4a076062f75373099505"
     },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
