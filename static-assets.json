@@ -1,25 +1,27 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "tko-audio-b5f468c0ab58",
+  "version": "fc74679e3b97-6ca7ca04b386",
   "files": {
+    "game-fc74679e3b97.wasm": {
+      "bytes": 39514754,
+      "contentType": "application/wasm",
+      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    "game-6ca7ca04b386.pck": {
+      "bytes": 43755908,
+      "contentType": "application/octet-stream",
+      "sha256": "6ca7ca04b386c241807efaddbaddf672e7fef88675f5527b88a280d8952c4947"
+    },
     "game.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm",
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "game.pck": {
-      "bytes": 54900236,
+      "bytes": 43755908,
       "contentType": "application/octet-stream",
-      "sha256": "b5f468c0ab58339d0c670c92715ffb1d177860bbfe2e4a076062f75373099505"
-    },
-    "game-fc74679e3b97.wasm": {
-      "bytes": 39514754,
-      "contentType": "application/wasm"
-    },
-    "game-47b1d382f436.pck": {
-      "bytes": 54930316,
-      "contentType": "application/octet-stream"
+      "sha256": "6ca7ca04b386c241807efaddbaddf672e7fef88675f5527b88a280d8952c4947"
     }
   }
 }
