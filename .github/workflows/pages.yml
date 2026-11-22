@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   deploy:
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -32,3 +34,70 @@ jobs:
       - name: Deploy to Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  smoke-test:
+    name: Verify live Manus and GitHub Pages builds
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      PAGES_URL: ${{ needs.deploy.outputs.page_url }}
+      MANUS_URL: https://baldbrawlpub-zduaykdy.manus.game
+    steps:
+      - name: Check published binaries and cross-deployment hashes
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          pages="${PAGES_URL%/}"
+
+          fetch_retry() {
+            curl --fail --silent --show-error --location \
+              --retry 12 --retry-delay 5 --retry-all-errors --max-time 30 "$1"
+          }
+
+          head_retry() {
+            curl --fail --silent --show-error --location --head \
+              --retry 12 --retry-delay 5 --retry-all-errors --max-time 30 "$1"
+          }
+
+          echo "Checking GitHub Pages: $pages"
+          pages_html="$(fetch_retry "$pages/index.html")"
+          manifest="$(fetch_retry "$pages/static-assets.json")"
+
+          jq -e '.mode == "external-static-same-origin"' <<<"$manifest" >/dev/null
+          pck_name="$(jq -r '.files | to_entries[] | select(.key | test("^game-[0-9a-f]{12}\\.pck$")) | .key' <<<"$manifest")"
+          wasm_name="$(jq -r '.files | to_entries[] | select(.key | test("^game-[0-9a-f]{12}\\.wasm$")) | .key' <<<"$manifest")"
+
+          [[ -n "$pck_name" && -n "$wasm_name" ]]
+          pck_sha="$(jq -r --arg name "$pck_name" '.files[$name].sha256' <<<"$manifest")"
+          wasm_sha="$(jq -r --arg name "$wasm_name" '.files[$name].sha256' <<<"$manifest")"
+          pck_bytes="$(jq -r --arg name "$pck_name" '.files[$name].bytes' <<<"$manifest")"
+          wasm_bytes="$(jq -r --arg name "$wasm_name" '.files[$name].bytes' <<<"$manifest")"
+          pck_hash="${pck_sha#sha256:}"
+          wasm_hash="${wasm_sha#sha256:}"
+
+          [[ "$pck_name" == "game-${pck_hash:0:12}.pck" ]]
+          [[ "$wasm_name" == "game-${wasm_hash:0:12}.wasm" ]]
+          grep -Fq "$pck_name" <<<"$pages_html"
+          grep -Fq "$wasm_name" <<<"$pages_html"
+
+          pck_headers="$(head_retry "$pages/$pck_name")"
+          wasm_headers="$(head_retry "$pages/$wasm_name")"
+          grep -Eq '^HTTP/[0-9.]+ 200' <<<"$pck_headers"
+          grep -Eq '^HTTP/[0-9.]+ 200' <<<"$wasm_headers"
+          echo "GitHub Pages OK: $pck_name ($pck_bytes bytes), $wasm_name ($wasm_bytes bytes)"
+
+          echo "Checking Manus Release: $MANUS_URL"
+          manus_html="$(fetch_retry "$MANUS_URL/")"
+          manus_pck="$(grep -oE '/manus-storage/game/sha256/[0-9a-f]{64}\.pck' <<<"$manus_html" | sort -u)"
+          manus_wasm="$(grep -oE '/manus-storage/game/sha256/[0-9a-f]{64}\.wasm' <<<"$manus_html" | sort -u)"
+
+          [[ "$manus_pck" == "/manus-storage/game/sha256/${pck_hash}.pck" ]]
+          [[ "$manus_wasm" == "/manus-storage/game/sha256/${wasm_hash}.wasm" ]]
+          manus_pck_headers="$(head_retry "$MANUS_URL$manus_pck")"
+          manus_wasm_headers="$(head_retry "$MANUS_URL$manus_wasm")"
+          grep -Eq '^HTTP/[0-9.]+ 200' <<<"$manus_pck_headers"
+          grep -Eq '^HTTP/[0-9.]+ 200' <<<"$manus_wasm_headers"
+          echo "Manus Release OK: PCK $pck_hash, WASM $wasm_hash"
+
+          echo "LIVE_SMOKE_TEST=PASS"
