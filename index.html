@@ -6,12 +6,12 @@
   <meta name="theme-color" content="#fce83c">
   <meta name="color-scheme" content="dark">
   <link rel="manifest" href="./site.webmanifest">
-
-
+  <link rel="icon" type="image/png" sizes="64x64" href="/share/favicon.png">
+  <link rel="apple-touch-icon" href="/share/favicon.png">
   <meta name="manus-game-loading-screen" content="1">
-
-
-
+  <title>The Bald Brawler</title>
+  <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
   <!-- Project-owned starting point, not the platform default. Customize the presentation below. -->
   <!-- Embedded Noto Sans SC loader subset: SIL Open Font License 1.1; license text: assets/template/fonts/NotoSansSC-OFL.txt. -->
@@ -24,7 +24,7 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
   </style>
   <style>
     html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #111; color: #ddd; font-family: "Noto Sans SC", sans-serif; }
-    #canvas { display: block; width: 100%; height: 100%; outline: none; }
+    #canvas { display: block; width: 100%; height: 100%; outline: none; touch-action: none; user-select: none; }
     #loading { position: fixed; inset: 0; display: grid; place-content: center; gap: 16px; padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); background: #111; text-align: center; }
     #loading[hidden], [hidden] { display: none; }
     h1 { margin: 0; font-size: clamp(20px, 5vw, 32px); overflow-wrap: anywhere; }
@@ -63,28 +63,6 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
     body { padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:0.001ms!important; transition-duration:0.001ms!important; scroll-behavior:auto!important; } }
   </style>
-<!-- manus:game-sharing:start -->
-<title>The Bald Brawler</title>
-<link rel="icon" type="image/png" href="./share/99adfec157f54dfaeced1e6b4ec60ec8320be954fac7e782ce34ce79dee3536b.png">
-<link rel="apple-touch-icon" href="./share/99adfec157f54dfaeced1e6b4ec60ec8320be954fac7e782ce34ce79dee3536b.png">
-<meta name="description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Bald Brawler">
-<meta property="og:description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta property="og:url" content="https://baldbrawlpub-zduaykdy.manus.game/">
-<meta property="og:image" content="https://baldbrawlpub-zduaykdy.manus.game/share/94d402a9a4bc6203560054a1b84335b0112ec0364e28f1487cbd545af4d2a17f.png">
-<meta property="og:image:width" content="2560">
-<meta property="og:image:height" content="1440">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="The Bald Brawler">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Bald Brawler">
-<meta name="twitter:description" content="Retro-Arcade-Boxkampf: Lies die Schlagansätze von Rusty Rudi bis Baron von Blitz, weiche aus, kontere und erkämpfe dir den World-Circuit-Titel – inklusive geheimem Traumkampf und gemeinsamer Bestenliste.">
-<meta name="twitter:image" content="https://baldbrawlpub-zduaykdy.manus.game/share/94d402a9a4bc6203560054a1b84335b0112ec0364e28f1487cbd545af4d2a17f.png">
-<meta name="twitter:image:alt" content="The Bald Brawler">
-<!-- manus:game-sharing:end -->
-  <link rel="preload" href="./game-fc74679e3b97.wasm?v=fc74679e3b97-6ca7ca04b386" as="fetch" type="application/wasm" crossorigin="anonymous">
-  <link rel="preload" href="./game-6ca7ca04b386.pck?v=fc74679e3b97-6ca7ca04b386" as="fetch" type="application/octet-stream" crossorigin="anonymous">
 </head>
 <body>
   <canvas id="canvas" tabindex="0">Your browser does not support canvas.</canvas>
@@ -100,10 +78,9 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
     <noscript>JavaScript is required to play this game.</noscript>
     </div>
   </section>
-  <script>(function(){var R={"index.wasm":"game-fc74679e3b97.wasm?v=fc74679e3b97-6ca7ca04b386","index.pck":"game-6ca7ca04b386.pck?v=fc74679e3b97-6ca7ca04b386"};var f=window.fetch.bind(window);window.fetch=function(i,o){var u=typeof i==="string"?i:(i&&i.url)||"";var b=u.split("?")[0].split("/").pop();return R[b]?f(R[b],o):f(i,o)};})();</script>
-<script>
+  <script>
     (() => {
-      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":43755908,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+      const config = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":43757300,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
       config.ensureCrossOriginIsolationHeaders = false;
       const threads = false;
       const canvas = document.getElementById('canvas');
@@ -119,9 +96,14 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
         canvas.tabIndex = 0;
         canvas.style.pointerEvents = 'auto';
         const forwarded = Symbol('manusCanvasForwarded');
+        const focusCanvas = () => canvas.focus({ preventScroll: true });
         const forwardPointer = (event) => {
-          if (event[forwarded] || event.target === canvas) return;
-          canvas.focus({ preventScroll: true });
+          if (event[forwarded]) return;
+          if (event.target === canvas) {
+            focusCanvas();
+            return;
+          }
+          focusCanvas();
           const init = {
             bubbles: true, cancelable: true, composed: true,
             pointerId: event.pointerId || 1,
@@ -132,17 +114,22 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
             ctrlKey: event.ctrlKey, shiftKey: event.shiftKey,
             altKey: event.altKey, metaKey: event.metaKey
           };
-          const clone = new PointerEvent(event.type, init);
+          const EventType = event.type.startsWith('pointer') ? PointerEvent : MouseEvent;
+          const clone = new EventType(event.type, init);
           Object.defineProperty(clone, forwarded, { value: true });
           canvas.dispatchEvent(clone);
         };
-        for (const type of ['pointerdown', 'pointerup', 'pointermove', 'click']) {
+        for (const type of ['pointerdown', 'pointerup', 'pointermove', 'click', 'mousedown', 'mouseup']) {
           window.addEventListener(type, forwardPointer, true);
         }
         window.addEventListener('keydown', (event) => {
-          if (event[forwarded] || event.target === canvas) return;
+          if (event[forwarded]) return;
+          if (event.target === canvas) {
+            focusCanvas();
+            return;
+          }
           if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return;
-          canvas.focus({ preventScroll: true });
+          focusCanvas();
           const clone = new KeyboardEvent('keydown', {
             bubbles: true, cancelable: true, composed: true,
             key: event.key, code: event.code, location: event.location,
@@ -153,7 +140,11 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
           canvas.dispatchEvent(clone);
         }, true);
         window.addEventListener('keyup', (event) => {
-          if (event[forwarded] || event.target === canvas) return;
+          if (event[forwarded]) return;
+          if (event.target === canvas) {
+            focusCanvas();
+            return;
+          }
           if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) return;
           const clone = new KeyboardEvent('keyup', {
             bubbles: true, cancelable: true, composed: true,
@@ -164,6 +155,8 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
           Object.defineProperty(clone, forwarded, { value: true });
           canvas.dispatchEvent(clone);
         }, true);
+        window.addEventListener('load', focusCanvas, { once: true });
+        window.setTimeout(focusCanvas, 0);
       };
       installCanvasInputBridge();
       document.getElementById('game-title').textContent = 'THE BALD BRAWLER';
@@ -277,8 +270,8 @@ Source SHA-256: 38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412
 	          const publicBootAssets = {};
 	          if (!window.location.pathname.includes('/__manus__/game-preview/')) {
 	            Object.assign(publicBootAssets, {
-	              'index.wasm': 'game-fc74679e3b97.wasm?v=fc74679e3b97-6ca7ca04b386',
-	              'index.pck': 'game-6ca7ca04b386.pck?v=fc74679e3b97-6ca7ca04b386'
+	              'index.wasm': 'game-fc74679e3b97.wasm',
+	              'index.pck': 'game-83591a517325.pck'
 	            });
 	          }
           const generatedFetch = window.fetch.bind(window);

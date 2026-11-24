@@ -1,27 +1,17 @@
 {
   "schema": 1,
   "mode": "external-static-same-origin",
-  "version": "fc74679e3b97-6ca7ca04b386",
+  "version": "fc74679e3b97-83591a517325",
   "files": {
+    "game-83591a517325.pck": {
+      "bytes": 43757300,
+      "contentType": "application/octet-stream",
+      "sha256": "83591a51732513a344bec34fbae27a1ebef09cc3bebe9bae8f5d10c162b3793e"
+    },
     "game-fc74679e3b97.wasm": {
       "bytes": 39514754,
       "contentType": "application/wasm",
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
-    },
-    "game-6ca7ca04b386.pck": {
-      "bytes": 43755908,
-      "contentType": "application/octet-stream",
-      "sha256": "6ca7ca04b386c241807efaddbaddf672e7fef88675f5527b88a280d8952c4947"
-    },
-    "game.wasm": {
-      "bytes": 39514754,
-      "contentType": "application/wasm",
-      "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
-    },
-    "game.pck": {
-      "bytes": 43755908,
-      "contentType": "application/octet-stream",
-      "sha256": "6ca7ca04b386c241807efaddbaddf672e7fef88675f5527b88a280d8952c4947"
     }
   }
 }
